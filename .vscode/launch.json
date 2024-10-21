@@ -1,0 +1,49 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug Svc - svc-http",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "start:debug"
+            ],
+            "port": 9220,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "restart": true,
+            "sourceMaps": true,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "cwd": "${workspaceFolder}/svc-http",
+            "outFiles": [
+                "${workspaceFolder}/svc-http/dist/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug Svc - svc-nats",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "start:debug"
+            ],
+            "port": 9221,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "restart": true,
+            "sourceMaps": true,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "cwd": "${workspaceFolder}/svc-nats",
+            "outFiles": [
+                "${workspaceFolder}/svc-nats/dist/**/*.js"
+            ]
+        }
+    ]
+}
